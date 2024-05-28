@@ -1,0 +1,40 @@
+{
+    "name": "expressjs-auths",
+    "version": "1.0.0",
+    "description": "A boiler plate for several expressJS authentication methods",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon dist/index.js",
+        "dev": "nodemon src/index.ts",
+        "seeder": "npx ts-node prisma/seed.ts",
+        "insertions": "npx ts-node prisma/insert-data.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "expressJS",
+        "authentication",
+        "JWT",
+        "OAuth",
+        "Auth0",
+        "Google",
+        "Facebook",
+        "GitHub"
+    ],
+    "author": "Samrou TEOURI",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.12.12",
+        "prisma": "^5.14.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    },
+    "dependencies": {
+        "@prisma/client": "^5.14.0",
+        "@types/bcrypt": "^5.0.2",
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.21",
+        "bcrypt": "^5.1.1",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2"
+    }
+}
