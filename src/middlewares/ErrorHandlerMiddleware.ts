@@ -4,19 +4,14 @@ import { CustomError } from "../utils/CustomError";
 export const ErrorHandler = async (err: CustomError, req: Request, res: Response, next: NextFunction) => {
     switch (err.statusCode) {
         case 400:
-            res.status(err.statusCode).json({ message: 'Bad request data format' });
-            break;
+            return res.status(err.statusCode).json({ message: 'Bad request data format' });
         case 401:
-            res.status(err.statusCode).json({ message: 'Unauthorized' });
-            break;
+            return res.status(err.statusCode).json({ message: 'Unauthorized' });
         case 403:
-            res.status(err.statusCode).json({ message: 'Forbidden' });
-            break;
+            return res.status(err.statusCode).json({ message: 'Forbidden' });
         case 404:
-            res.status(err.statusCode).json({ message: 'Not Found' });
-            break;
+            return res.status(err.statusCode).json({ message: 'Not Found' });
         default:
-            res.status(500).json({ message: 'Internal Server Error' });
-            break;
+            return res.status(500).json({ message: 'Internal Server Error' });
     }
 }
